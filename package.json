@@ -1,0 +1,22 @@
+{
+  "name": "oppkey-summer-of-code-2022",
+  "version": "1.0.0",
+  "private": true,
+  "description": "oppkey-summer-of-code-2022",
+  "author": "Craig",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.15.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
