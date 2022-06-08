@@ -8,6 +8,8 @@ const IndexPage = () => {
       <p>Short tutorials using Flutter and HTTP to access RICOH THETA APIs</p>
       <StaticImage alt="Oppkey Palo Alto Office"         
       src="../images/office.png"/>
+
+      <StaticImage alt="Tiny Planet" src="../images/c_a_2.jpg" />
     </Layout>
   )
 }
