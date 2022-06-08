@@ -3,5 +3,5 @@ module.exports = {
     title: `Oppkey Summer of Code 2022`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
-}
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp"],
+};
