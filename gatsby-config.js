@@ -10,5 +10,6 @@ module.exports = {
       path: `${__dirname}/thetax-starters`,
     }
   },
+  "gatsby-plugin-mdx",
 ],
 };

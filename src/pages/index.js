@@ -10,7 +10,6 @@ const IndexPage = () => {
       src="../images/office.png"/>
       <StaticImage alt="Concept 2" src="../images/staff.jpg" />
 
-      {/* <StaticImage alt="Concept 2" src="../images/c_a_2.jpg" /> */}
     </Layout>
   )
 }
