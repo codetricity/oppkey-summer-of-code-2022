@@ -20,13 +20,21 @@ const IndexPage = () => {
       
 <h2>Summer of Code 2022 Kick-Off Picnic</h2>
       <StaticImage alt="June Group Picnic" src="../images/june_picnic_group.png" />
-      <p> Test of Gatsby StaticImage system. File above is 2.0MB.  File below is 
-        1.17MB
+      <p> Test of Gatsby StaticImage system. File above is 2.0MB. 
       </p>
+      <hr></hr>
 
       <StaticImage alt="Jesse Agueda" src="../images/jesse_agueda.png" />
+      <p> File above of Jesse and Agueda is 
+        1.17MB</p>
+        <hr></hr>
 
-
+    <StaticImage alt="Picnic Wind" src="../images/picnic_wind.png" />
+    <p> The wind kept things cool and lively.  Static image file above of Agueda grabbing a beverage cup blowing away is 1.8MB.</p>
+    <hr></hr>
+    <StaticImage alt="Steak" src="../images/steak.png" />
+    <p> We had several pounds of charcoal-grilled steak and several pounds of chicken. Image file is 1.3MB.</p>
+    <hr></hr>
 
     </Layout>
   )
