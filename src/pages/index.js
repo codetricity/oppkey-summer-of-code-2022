@@ -13,6 +13,10 @@ const IndexPage = () => {
       </p>
       <StaticImage alt="Concept 2" src="../images/staff.png" />
       
+<h2>Summer of Code 2022 Kick-Off Picnic</h2>
+      <StaticImage alt="June Group Picnic" src="../images/june_picnic_group.png" />
+      <p> Test of Gatsby StaticImage system</p>
+
 
     </Layout>
   )
