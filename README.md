@@ -1,14 +1,16 @@
-# Oppkey Summer of Code 2022
+# RICOH THETA X Development Getting Started Guide
 
-Test of using Gatsby
+ https://start.theta360.guide
 
-https://oppkeysummerofcode2022main.gatsbyjs.io/
+## Technology Assessment
 
-Domain is moving to https://start.theta360.guide
-
+In addition to building the Getting Started content and sample applications,
+we are also testing Gatsby for use as web site infrastructure for things
+like landing pages and email capture.
 
 ---
 
 ## Reference
 
 * https://www.gatsbyjs.com/blog/mdx-embedded-gatsby-image/
+* original domain on Gatsby Cloud https://oppkeysummerofcode2022main.gatsbyjs.io/
