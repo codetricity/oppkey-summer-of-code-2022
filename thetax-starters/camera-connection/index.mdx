@@ -5,7 +5,11 @@ hero_image: "./office.png"
 hero_image_alt: "office shot taken with basic application"
 hero_image_credit_text: "Oppkey Developer Intern"
 hero_image_credit_link: "https://oppkey.com"
+embeddedImagesLocal:
+  - layout.png
 ---
+
+![layout](./layout.png)
 
 Basic button controls using HTTP
 
@@ -41,7 +45,7 @@ var response = await http.get(url, headers: header);
 
 At the moment, this application does not display any response to the screen, instead, the output is printed out to the console. 
 
-![output](docs/output.png)
+![output](output.png)
 
 ## Take Picture 📷
 
@@ -66,7 +70,7 @@ The response requires the url, but I also passed in the `bodyJson`.
 
 As the response is a POST request, the application sends out information and takes a picture. 
 
-![example picture](docs/screenshot.jpg)
+![example picture](screenshot.jpg)
 
 ## JSON Decode
 

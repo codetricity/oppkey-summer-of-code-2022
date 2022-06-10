@@ -3,3 +3,9 @@
 Test of using Gatsby
 
 https://oppkeysummerofcode2022main.gatsbyjs.io/
+
+---
+
+## Reference
+
+* https://www.gatsbyjs.com/blog/mdx-embedded-gatsby-image/
