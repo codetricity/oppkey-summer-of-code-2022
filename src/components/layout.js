@@ -25,7 +25,7 @@ const Layout = ({ pageTitle, children }) => {
                 <ul className={navLinks}>
                 <li className={navLinkItem}> <Link to="/" className={navLinkText}>Home</Link></li>
                 <li className={navLinkItem}><Link to="/about" className={navLinkText}>About</Link></li>
-                <li className={navLinkItem}><Link to="/thetax-starters" className={navLinkText}>THETA X Starter Apps</Link> </li>
+                <li className={navLinkItem}><Link to="/thetax-starters" className={navLinkText}>Full Listing of Starter Apps</Link> </li>
                 </ul>
             </nav>
             <main>

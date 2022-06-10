@@ -1,26 +1,48 @@
 import * as React from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="RICOH THETA X Development Getting Started">
-      <p>Short tutorials using Flutter and HTTP to access RICOH THETA APIs. 
-        Testing basic camera command app below.  Code and tutorial available in 
-        starter app #1.
-      </p>
+    <Layout pageTitle="Featured Starter Apps">
+    
+    
+    <Link to="/thetax-starters/camera-connection/">
+    <h2>#1 - Camera API Connection</h2>
+
       <StaticImage alt="Oppkey Palo Alto Office"         
       src="../images/office.png"/>
+      </Link>
+
       <p>
         Send API commands to the camera. Display camera response information.  
         Output test of starter app #2 below.  Shows the response.body from the 
         camera in a text window on the app. 
       </p>
-      <StaticImage alt="Concept 2" src="../images/staff.png" />
+      <hr></hr>
+      {/* begin tutorial #2 state management */}
+      <Link to="/thetax-starters/app-state/">
+      <h2> #2 - Camera Response and State Management</h2>
+      <StaticImage alt="concept 2 state management" src='../images/concept_2_state_management.png' />
+      </Link>
+      <p></p>
+      <hr />
+      {/* begin tutorial #3 */}
+
+      <Link to="/thetax-starters/bloc-intro/">
+      <h2> #3 - BLoC State Management</h2>
+      <StaticImage alt="Concept 3 BloC " src="../images/staff.png" />
+
+      </Link>
+      <p>Use Business LOgic Components to separate logic from gui and state</p>
+      <hr />
+
       
-<h2>Summer of Code 2022 Kick-Off Picnic</h2>
+<h2>THETA Community Coding Culture </h2>
       <StaticImage alt="June Group Picnic" src="../images/june_picnic_group.png" />
-      <p> Test of Gatsby StaticImage system. File above is 2.0MB. 
+      <p> Project kick-off and test of Gatsby StaticImage system to host starter
+        apps. File above is 2.0MB. 
       </p>
       <hr></hr>
 

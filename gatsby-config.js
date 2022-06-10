@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `THETA X Development Summer of Code 2022`,
+    title: `THETA X Development Getting Started`,
     siteUrl: `https://oppkeysummerofcode2022main.gatsbyjs.io/`,
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
