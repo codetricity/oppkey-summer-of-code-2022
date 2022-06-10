@@ -28,3 +28,11 @@
     font-weight: 700;
     margin: 3rem 0;
 }
+
+h2 {
+    color: grey;
+}
+
+.page-title {
+    color: grey;
+}

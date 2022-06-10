@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Featured Starter Apps">
+    <Layout pageTitle=" ">
     
     
     <Link to="/thetax-starters/camera-connection/">
