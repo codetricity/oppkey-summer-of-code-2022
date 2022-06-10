@@ -40,22 +40,20 @@ const IndexPage = () => {
 
       
 <h2>THETA Community Coding Culture </h2>
-      <StaticImage alt="June Group Picnic" src="../images/june_picnic_group.png" />
       <p> Project kick-off and test of Gatsby StaticImage system to host starter
-        apps. File above is 2.0MB. 
+        apps. 
       </p>
       <hr></hr>
 
       <StaticImage alt="Jesse Agueda" src="../images/jesse_agueda.png" />
-      <p> File above of Jesse and Agueda is 
-        1.17MB</p>
+      <p> Jesse and Agueda eye the tasty food. </p>
         <hr></hr>
 
     <StaticImage alt="Picnic Wind" src="../images/picnic_wind.png" />
-    <p> The wind kept things cool and lively.  Static image file above of Agueda grabbing a beverage cup blowing away is 1.8MB.</p>
+    <p> The wind kept things cool and lively.  Agueda grabbing a beverage cup blowing away!</p>
     <hr></hr>
     <StaticImage alt="Steak" src="../images/steak.png" />
-    <p> We had several pounds of charcoal-grilled steak and several pounds of chicken. Image file is 1.3MB.</p>
+    <p> We had several pounds of charcoal-grilled steak and several pounds of chicken.</p>
     <hr></hr>
 
     </Layout>
