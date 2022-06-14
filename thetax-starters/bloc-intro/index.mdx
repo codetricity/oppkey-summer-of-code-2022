@@ -7,7 +7,100 @@ hero_image_credit_text: "Mari"
 hero_image_credit_link: "https://oppkey.com"
 ---
 
-This example uses the Business LOgic Component (BLoC) pattern
-to create more scalable state management.  Separating the
-GUI, logic, state, and events makes it easier for us to
-organize more buttons and screens as our app gets more complex. 
+Business LOgic Component (BLoC) is used to create more scalable state management. If you use set state, is easier to set up becaused everything is in one file: main.dart. However, eventually, this can get unwieldily and long. Separating the GUI, logic, state, and events makes it easier to organize more buttons and screens as an app gets more complex. 
+
+BLoC basically means that everything in the app is represented as stream of events: widgets submit events; other widgets will respond. BLoC sits in the middle, managing the interactions.
+
+BloC makes it easier to access the state anywhere. Buttons, response windows with text, images, lists of images. When using set state, you just put all the buttons in one file. With BloC, a column of buttons is made into its own file, with its own widget which holds all the buttons. View has a directory for button and response_window.
+
+It's possible but difficult to do this with set state. This is why Bloc exists. When you extract out the widgets, that's when you see the advantage of Bloc over set state. Response window is smaller, so it's easier to do things with it. For example, using If statements, to check the state. Line 15 and Line 16.
+
+The package is called flutter_bloc, import it into your app. 
+
+### Fundamental concepts
+
+Event: An external (or sometimes internal) stimulus that an application receives.
+
+State: The internal properties or attributes of an application. Or the values of the properties of an application.
+
+Event - State Relationship: When the application receives an event, in general, some logic or process is executed that modifies the state of the app. The change is (often) reflected in the user interface.
+
+
+# THETA X Bloc App
+
+![demo of app](theta_new_gif.gif)
+
+This application utilizes Bloc to handle state management. The connection to the camera is 
+handled by the http package inside of the Bloc. The application shows the use of commands such as [listFiles](https://api.ricoh/docs/theta-web-api-v2.1/commands/camera.list_files/) from the THETA Web API. 
+
+```dart
+var url = Uri.parse('http://192.168.1.1/osc/commands/execute');
+    var header = {'Content-Type': 'application/json;charset=utf-8'};
+    var bodyMap = {
+    'name': 'camera.listFiles',
+    'parameters': {
+        'fileType': 'image',
+        'startPosition': 0,
+        'entryCount': 1,
+        'maxThumbSize': 0
+    }
+    };
+    var bodyJson = jsonEncode(bodyMap);
+    var response = await http.post(url, headers: header, body: bodyJson);
+    var thetaFiles = jsonDecode(response.body);
+    var fileUrl = thetaFiles['results']['entries'][0]['fileUrl'];
+    emit(ThetaState(message: fileUrl));
+```
+
+## Workarounds
+
+
+
+For the THETA X, the `thumbnail` does not appear unless the `_detail` is set to true. The thumbnail only works for a single file. If we need to get multiple thumbnails, then the `startPosition` needs to be changed to a different number and run multiple times. 
+
+Another technique is to get the list of file urls and pass it `fileUrl = fileUrl + "?type=thumb";`. This technique will also show the thumbnail. 
+
+## Bloc Structure
+
+The Bloc structure helps to manage the state across an application and handle events. Previously, I created an application using `setState()`, however, this approach is not very scalable as our application becomes more complex. With the use of Bloc, we can separate out the events and ensure that every file can access the state. The Bloc state management comes from the flutter [package](https://pub.dev/packages/flutter_bloc). 
+
+### Event
+
+Events in Bloc are executed when an action occurs. For each separate button in the application, I created a specific event. The `GetInfoEvent` below connects to the Info button.
+
+```dart
+class GetInfoEvent extends ThetaEvent {}
+```
+### State
+
+The State is emitted in the Bloc file and holds information in parameters. The State extends [Equatable](https://pub.dev/packages/equatable). When the state changes, the screen updates.
+
+### Bloc
+
+Inside of the Bloc file, I have a series of `on` methods that pair an Event with the State. Basically, when an Event occurs, such as tapping on the Info button, the app will get the response from the camera. Next, it passes the response into the State, therefore displaying our text.
+
+```dart
+    on<GetInfoEvent>((event, emit) async {
+      var url = Uri.parse('http://192.168.1.1/osc/info');
+      var response = await http.get(url);
+      var encoder = JsonEncoder.withIndent('  ');
+      var formattedResponse = encoder.convert(jsonDecode(response.body));
+      emit(ThetaState(message: formattedResponse));
+    });
+```
+
+<img src="response.png" width= 55%>
+
+## ListView
+
+The Show List Images button displays a list of thumbnail images. I created a `ListView` widget that uses the `urlList` to create the images. The list of urls can be accessed once we wrap our widget with a `BlocBuilder`. For the `ListView` widget, I assigned the length to be the length of the `urlList`. Additionally, an Image is created from each item inside of the urlList.
+
+```dart
+   return ListView.builder(
+    itemCount: state.urlList.length,
+    itemBuilder: ((context, index) {
+    return Image.network('${state.urlList[index]}?type=thumb');
+    }));
+```
+
+<img src="thumbnails.png" width=55%>
