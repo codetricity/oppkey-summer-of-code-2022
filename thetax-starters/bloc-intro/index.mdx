@@ -89,6 +89,8 @@ Inside of the Bloc file, I have a series of `on` methods that pair an Event with
     });
 ```
 
+![response](response.png)
+
 ## ListView
 
 The Show List Images button displays a list of thumbnail images. I created a `ListView` widget that uses the `urlList` to create the images. The list of urls can be accessed once we wrap our widget with a `BlocBuilder`. For the `ListView` widget, I assigned the length to be the length of the `urlList`. Additionally, an Image is created from each item inside of the urlList.
@@ -100,3 +102,4 @@ The Show List Images button displays a list of thumbnail images. I created a `Li
     return Image.network('${state.urlList[index]}?type=thumb');
     }));
 ```
+![thumbnails](thumbnails.png)
