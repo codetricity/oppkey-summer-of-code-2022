@@ -31,7 +31,7 @@ Event - State Relationship: When the application receives an event, in general, 
 ![demo of app](theta_new_gif.gif)
 
 This application utilizes Bloc to handle state management. The connection to the camera is 
-handled by the http package inside of the Bloc. The application shows the use of commands such as [listFiles](https://api.ricoh/docs/theta-web-api-v2.1/commands/camera.list_files/) from the THETA Web API. 
+handled by the http package inside of the Bloc. The application shows the use of commands such as listFiles from the THETA Web API. 
 
 ```dart
 var url = Uri.parse('http://192.168.1.1/osc/commands/execute');
@@ -62,7 +62,7 @@ Another technique is to get the list of file urls and pass it `fileUrl = fileUrl
 
 ## Bloc Structure
 
-The Bloc structure helps to manage the state across an application and handle events. Previously, I created an application using `setState()`, however, this approach is not very scalable as our application becomes more complex. With the use of Bloc, we can separate out the events and ensure that every file can access the state. The Bloc state management comes from the flutter [package](https://pub.dev/packages/flutter_bloc). 
+The Bloc structure helps to manage the state across an application and handle events. Previously, I created an application using `setState()`, however, this approach is not very scalable as our application becomes more complex. With the use of Bloc, we can separate out the events and ensure that every file can access the state. The Bloc state management comes from the flutter package. 
 
 ### Event
 
@@ -73,7 +73,7 @@ class GetInfoEvent extends ThetaEvent {}
 ```
 ### State
 
-The State is emitted in the Bloc file and holds information in parameters. The State extends [Equatable](https://pub.dev/packages/equatable). When the state changes, the screen updates.
+The State is emitted in the Bloc file and holds information in parameters. The State extends Equatable. When the state changes, the screen updates.
 
 ### Bloc
 
