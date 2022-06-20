@@ -7,15 +7,25 @@ hero_image_credit_text: "Mari"
 hero_image_credit_link: "https://oppkey.com"
 ---
 
+# Using BLoc for more scalable state management
+
+This tutorial is the third in a series aimed at helping developers learn how to work with the RICOH THETA X camera. It focuses on using the API to build a mobile app. The examples provided use Flutter to build mobile apps. Source code is downloadable and open to pull requests on GitHub.
+
+# Main Resources
+
+* [RICOH THETA API](https://api.ricoh/docs/theta-web-api-v2.1/)
+* [theta360.guide developers community](https://theta360.guide/)
+* [Code for this tutorial](https://github.com/theta360developers/theta_x_gs3)
+
+## Getting Started
+
 Business LOgic Component (BLoC) is used to create more scalable state management. If you use set state, is easier to set up becaused everything is in one file: main.dart. However, eventually, this can get unwieldily and long. Separating the GUI, logic, state, and events makes it easier to organize more buttons and screens as an app gets more complex. 
 
 BLoC basically means that everything in the app is represented as stream of events: widgets submit events; other widgets will respond. BLoC sits in the middle, managing the interactions.
 
-BloC makes it easier to access the state anywhere. Buttons, response windows with text, images, lists of images. When using set state, you just put all the buttons in one file. With BloC, a column of buttons is made into its own file, with its own widget which holds all the buttons. View has a directory for button and response_window.
+BloC makes it easier to access the state anywhere, like with buttons, response windows with text, images, lists of images. When using set state, you just put all the buttons in one file. With BloC, a column of buttons is made into its own file, with its own widget which holds all the buttons. View has a directory for button and response_window.
 
-It's possible but difficult to do this with set state. This is why Bloc exists. When you extract out the widgets, that's when you see the advantage of Bloc over set state. Response window is smaller, so it's easier to do things with it. For example, using If statements, to check the state. Line 15 and Line 16.
-
-The package is called flutter_bloc, import it into your app. 
+It's possible but difficult to do this with set state. This is why Bloc exists. When you extract out the widgets, that's when you see the advantage of Bloc over set state. 
 
 ### Fundamental concepts
 
@@ -53,8 +63,6 @@ var url = Uri.parse('http://192.168.1.1/osc/commands/execute');
 ```
 
 ## Workarounds
-
-
 
 For the THETA X, the `thumbnail` does not appear unless the `_detail` is set to true. The thumbnail only works for a single file. If we need to get multiple thumbnails, then the `startPosition` needs to be changed to a different number and run multiple times. 
 
