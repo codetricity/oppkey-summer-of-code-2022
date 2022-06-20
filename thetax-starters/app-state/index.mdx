@@ -24,7 +24,7 @@ This tutorial is the second in a series aimed at helping developers learn how to
 * The response from the camera is a JSON string (use `JsonEncoder`)
 * Uses Flutter Syntax View to format the output nicely
 
-![screenshot](./screenshot.png)
+## Getting Started
 
 This application connects to a RICOH THETA X camera with the http package from Dart and outputs the response to the screen using state management. State management is used to share the application state between screens, across an app. This app uses a Stateful widget and updates the outputted response inside of the `setState()` method. 
 
@@ -39,6 +39,7 @@ setState(() {
     message = formattedResponse;
 });
 ```
+![screenshot](./screenshot.png)
 
 ## Syntax View
 
