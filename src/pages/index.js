@@ -8,7 +8,7 @@ const IndexPage = () => {
     <Layout pageTitle=" ">
 
 <p>
-  HTTP request to RICOH THETA using Wi-Fi.
+  HTTP request to RICOH THETA API using Wi-Fi.
   </p>
   <p>
     curl 192.168.1.1/osc/info
@@ -24,7 +24,7 @@ const IndexPage = () => {
       </p>
     
     <Link to="/thetax-starters/camera-connection/">
-    <h2>#1 - Camera API Connection</h2>
+    <h2>#1 - RICOH THETA API Camera Connection</h2>
 
       <StaticImage alt="Oppkey Palo Alto Office"         
       src="../images/office.png"/>
@@ -40,7 +40,7 @@ const IndexPage = () => {
       <hr></hr>
       {/* begin tutorial #2 state management */}
       <Link to="/thetax-starters/app-state/">
-      <h2> #2 - Camera Response and State Management</h2>
+      <h2> #2 -Using RICOH THETA API Response to Update App Screen</h2>
       <StaticImage alt="concept 2 state management" src='../images/concept_2_state_management.png' />
       </Link>
       <p>
@@ -52,7 +52,7 @@ const IndexPage = () => {
       {/* begin tutorial #3 */}
 
       <Link to="/thetax-starters/bloc-intro/">
-      <h2> #3 - BLoC State Management</h2>
+      <h2> #3 - RICOH THETA API App State Management with BLoC</h2>
       <StaticImage alt="Concept 3 BloC " src="../images/staff.png" />
 
       </Link>
@@ -63,7 +63,7 @@ const IndexPage = () => {
       <hr />
 
       
-<h2>THETA Community Coding Culture </h2>
+<h2>RICOH THETA API Community Culture </h2>
       <p> Project kick-off and test of Gatsby StaticImage system to host starter
         apps. 
       </p>

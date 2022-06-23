@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `THETA X Development Getting Started`,
+    title: `RICOH THETA API Development Getting Started`,
     siteUrl: `https://oppkeysummerofcode2022main.gatsbyjs.io/`,
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp", 
