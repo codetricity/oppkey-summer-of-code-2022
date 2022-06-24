@@ -26,6 +26,15 @@ module.exports = {
         }
       ]
     }
+  },
+  {
+    resolve: `gatsby-plugin-google-gtag`,
+    options: {
+      trackingIds: [
+        "G-DSEPQZKM1K", 
+      ],
+    
+    }
   }
 
 ],
