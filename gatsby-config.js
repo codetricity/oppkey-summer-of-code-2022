@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `RICOH THETA API Development Getting Started`,
-    siteUrl: `https://oppkeysummerofcode2022main.gatsbyjs.io/`,
+    url: `https://start.theta360.guide`,
+    image: "/getting_started.jpg",
+    description: "RICOH THETA API Getting started guide. Mobile app development for 360 cameras.",
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp", 
     "gatsby-transformer-sharp", 
