@@ -14,6 +14,7 @@ const AboutPage = () => {
                 The community receives sponsorship from RICOH, but is not an
                 official RICOH site.  Please contact RICOH directly for official
                 information </p>
+                <p>info@oppkey.com</p>
         </Layout>
     )
 }
