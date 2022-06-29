@@ -23,7 +23,7 @@ const IndexPage = () => {
       </code>
       </p>
     
-    <Link to="/thetax-starters/camera-connection/">
+    <Link to="/thetax-starters/01-camera-connection/">
     <h2>#1 - RICOH THETA API Camera Connection</h2>
 
       <StaticImage alt="Oppkey Palo Alto Office"         
@@ -39,7 +39,7 @@ const IndexPage = () => {
       </p>
       <hr></hr>
       {/* begin tutorial #2 state management */}
-      <Link to="/thetax-starters/app-state/">
+      <Link to="/thetax-starters/02-app-state/">
       <h2> #2 -Using RICOH THETA API Response to Update App Screen</h2>
       <StaticImage alt="concept 2 state management" src='../images/concept_2_state_management.png' />
       </Link>
@@ -51,7 +51,7 @@ const IndexPage = () => {
       <hr />
       {/* begin tutorial #3 */}
 
-      <Link to="/thetax-starters/bloc-intro/">
+      <Link to="/thetax-starters/03-bloc-intro/">
       <h2> #3 - RICOH THETA API App State Management with BLoC</h2>
       <StaticImage alt="Concept 3 BloC " src="../images/staff.png" />
 
@@ -61,6 +61,27 @@ const IndexPage = () => {
         files on camera using listFiles.
         Use Business LOgic Components to separate logic from GUI and application state.</p>
       <hr />
+
+      <Link to="/thetax-starters/04-multibloc/">
+      <h2> #4 - RICOH THETA API Screen and Settings Organization</h2>
+      <StaticImage alt="Concept 4 BloC " src="../images/staff.png" />
+
+      </Link>
+      <p>Organize camera settings onto different screens using multiple blocs. </p>
+      <p>API Examples:
+      </p>
+      <ol>
+        <li>image stitching</li>
+        <li>image top/bottom correction</li>
+        <li> image exposure compensation</li>
+        <li> image HDR on/off</li>
+        <li> video stitching</li>
+        <li>video formats: 8K 2fps, 8K 10fps, 4K 30fps</li>
+        <li> video bitrate: fine, normal, economy</li>
+   
+
+      </ol>
+      <hr />      
 
       
 <h2>RICOH THETA API Community Culture </h2>
