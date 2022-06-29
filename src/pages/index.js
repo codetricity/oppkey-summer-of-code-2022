@@ -56,15 +56,22 @@ const IndexPage = () => {
       <StaticImage alt="Concept 3 BloC " src="../images/staff.png" />
 
       </Link>
-      <p>List thumbnails at reduced size for network efficiency. Show 360 image with navigation. 
-        Set 8K 2fps  and 8K 5fps video. Switch between image and video mode. Extract URL of
-        files on camera using listFiles.
+      <p>
         Use Business LOgic Components to separate logic from GUI and application state.</p>
+        <p>
+          API Examples:
+        </p>
+        <ul>
+          <li>list thumbnails to improve app performance</li>
+          <li>Show 360 image with navigation</li>
+          <li>8K 2fps and 8K 5fps video</li>
+          <li>Extract URL of files using listFiles</li>
+        </ul>
       <hr />
 
       <Link to="/thetax-starters/04-multibloc/">
       <h2> #4 - RICOH THETA API Screen and Settings Organization</h2>
-      <StaticImage alt="Concept 4 BloC " src="../images/staff.png" />
+      <StaticImage alt="Concept 4 BloC " src="../images/04_screen_main.png" />
 
       </Link>
       <p>Organize camera settings onto different screens using multiple blocs. </p>
