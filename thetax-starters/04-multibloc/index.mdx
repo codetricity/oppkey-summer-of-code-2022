@@ -19,6 +19,8 @@ When the application changes or gets a setting that is specific to video, the ca
 first be changed into video mode.  If you attempt to change a setting such as the video file
 format when the camera is in image mode, the command will fail.
 
+For example, with the [fileFormat option](https://api.ricoh/docs/theta-web-api-v2.1/options/file_format/), if you set the parameters to image, but have set [captureMode](https://api.ricoh/docs/theta-web-api-v2.1/options/capture_mode/) to video, your app will not function properly.
+
 Your application should be able to switch between the image and video modes for the best
 user experience.
 
