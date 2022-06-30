@@ -1,6 +1,6 @@
 # RICOH THETA X Development Getting Started Guide
 
- https://start.theta360.guide
+[Live site for RICOH THETA Getting Started](https://start.theta360.guide)
 
 ## Technology Assessment
 
@@ -12,5 +12,4 @@ like landing pages and email capture.
 
 ## Reference
 
-* https://www.gatsbyjs.com/blog/mdx-embedded-gatsby-image/
-* original domain on Gatsby Cloud https://oppkeysummerofcode2022main.gatsbyjs.io/
+* [embed Gatsby image in MDX files](https://www.gatsbyjs.com/blog/mdx-embedded-gatsby-image/)
