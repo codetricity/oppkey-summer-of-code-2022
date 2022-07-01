@@ -39,7 +39,15 @@ to use multiple Blocs in a RICOH THETA application. The settings are grouped tog
 * [theta360.guide developers community](https://theta360.guide/)
 * [Code for this tutorial](https://github.com/theta360developers/theta_x_gs4)
 
-## Multiple Blocs
+## Organizing Camera Settings Based on Capture Mode
+
+As the settings for video and image mode are different, the application groups
+the settings into separate screen.  Each screen has it's own BLoC, which consists of
+separate state, event, and "business logic" per screen.  
+
+The settings for "image capture" mode and "video capture" mode are clearly divided, which
+helps reduce the possibility of your app accidentally trying to set an image setting from a 
+video setting GUI component. 
 
 ```dart
 return MultiBlocProvider(
@@ -53,7 +61,7 @@ return MultiBlocProvider(
       child: MaterialApp())
 ```
 
-In this application, each screen has its own Bloc to make the State more manageable. In the `main.dart` file, I used the `MultiBlocProvider` instead of the `BlocProvider` to list out all the Blocs. This enables me to use multiple Blocs throughout the application.
+In our sample application, each screen has its own Bloc to make the State more manageable. In the `main.dart` file, I used the `MultiBlocProvider` instead of the `BlocProvider` to list out all the Blocs. This enables me to use multiple Blocs throughout the application.
 
 ```dart
 return BlocBuilder<VideoSettingsBloc, VideoSettingsState>(
@@ -71,16 +79,11 @@ With the use of Bloc, it's fairly straightforward to create multiple buttons on 
 ![image button](./imagebutton.png)
 
 
-## Ternary Operator
+## Switch Button GUI Based on Camera State with Ternary Operator
 
-To switch the recording button into a square, I utilized the ternary operator from Dart. The ternary operator first checks if `isRecording` is false and sets the button to a circular button. Else, when `isRecording` is true, the button is set to a square button. 
+To switch the recording button into a square, the app uses a ternary operator from Dart. The ternary operator first checks if `isRecording` is false and sets the button to a circular button. Else, when `isRecording` is true, the button is set to a square button. 
 
-```mermaid
-  graph TD;
-      A[!isRecording] -- true -->B[Circular Button];
-      A[!isRecording] -- false -->C[Square Button];
-     
-```
+![check camera recording state](./is_recording.png)
 
 
 ```dart

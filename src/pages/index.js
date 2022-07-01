@@ -31,12 +31,17 @@ const IndexPage = () => {
       </Link>
 
       <p>
-        Camera as HTTP endpoint. HTTP GET and POST request format. Header format. POST request
-        with body. 
-        
-        <a href="https://api.ricoh/docs/theta-web-api-v2.1/">
-        Official RICOH API documentation</a>. <a href="https://community.theta360.guide/">Community support</a>. 
+        Examples connecting to RICOH THETA Camera as HTTP endpoint. 
       </p>
+      <p>
+        APIs Covered:
+      </p>
+      <ul>
+        <li><a href="https://api.ricoh/docs/theta-web-api-v2.1/protocols/info/">info </a> - HTTP GET</li> 
+        <li><a href="https://api.ricoh/docs/theta-web-api-v2.1/protocols/state/">state </a> - HTTP POST - no body</li> 
+        <li><a href="https://api.ricoh/docs/theta-web-api-v2.1/commands/camera.take_picture/">takePicture</a> - 
+        HTTP POST with body. No parameters for commands/execute</li>
+      </ul>
       <hr></hr>
       {/* begin tutorial #2 state management */}
       <Link to="/thetax-starters/02-app-state/">
