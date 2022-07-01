@@ -69,8 +69,12 @@ const IndexPage = () => {
         <ul>
           <li>list thumbnails to improve app performance</li>
           <li>Show 360 image with navigation</li>
-          <li>8K 2fps and 8K 5fps video</li>
-          <li>Extract URL of files using listFiles</li>
+          <li>8K 2fps and 8K 5fps video using 
+            <a href="https://api.ricoh/docs/theta-web-api-v2.1/options/file_format/"> fileFormat</a> option</li>
+          <li>Extract URL of files using 
+            <a href="https://api.ricoh/docs/theta-web-api-v2.1/commands/camera.list_files/">
+             camera.listFiles</a>
+            </li>
         </ul>
       <hr />
 
@@ -79,7 +83,9 @@ const IndexPage = () => {
       <StaticImage alt="Concept 4 BloC " src="../images/04_screen_main.png" />
 
       </Link>
-      <p>Organize camera settings onto different screens using multiple blocs. </p>
+      <p>Organize camera settings onto different screens using multiple blocs. Change GUI based
+        on camera state. Automatically change shutter button behavior. 
+      </p>
       <p>API Examples:
       </p>
       <ol>
@@ -97,8 +103,7 @@ const IndexPage = () => {
 
       
 <h2>RICOH THETA API Community Culture </h2>
-      <p> Project kick-off and test of Gatsby StaticImage system to host starter
-        apps. 
+      <p> Project kick-off. 
       </p>
       <hr></hr>
 
