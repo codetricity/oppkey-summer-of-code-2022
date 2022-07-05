@@ -78,7 +78,7 @@ The current solution is to check if `showImage` is true within the `GetModeEvent
             showImage: true));
 ```
 
-![thumbnail](docs/images/thumbnail.png)
+![thumbnail](thumbnail.png)
 
 ## Using BLoC to manage state
 
@@ -86,8 +86,9 @@ The project is separated into three separate Blocs(`camera_use`, `image_screen`,
 
 When the video starts/stops, the `IconButton` changes shape to match the video's State. 
 
-<img src="docs/images/startrecord.png" width=40%>
-<img src="docs/images/stoprecord.png" width=40%>
+![Start Record](startrecord.png)
+
+![Stop Record](stoprecord.png)
 
 Although the application has three separate Blocs, it calls two Blocs on one screen. For example, for the image screen, the button for getting the camera mode calls the `CameraUseBloc`. 
 
@@ -116,10 +117,10 @@ Contrastly, the button for taking the picture calls the `ImageScreenBloc`.
 
 Below is a diagram illustrating the flow of the Bloc structure. Both the Image Screen and the Video Screen Blocs access the Camera Use Bloc. In this way, the Camera Use Bloc connects the two screens together. The Camera Use Bloc accesses the camera's mode so that each of the screens will change depending on the mode of the physical camera.
 
-![flow chart](docs/images/imagescreen.png)
+![flow chart](imagescreen.png)
 
 Although the application calls multiple Blocs in one screen, it successfully performs the functionality as expected and gets the camera's mode.
 
 Here is a test shot taken with the app on the RICOH THETA X at 5.5K resolution.
 
-![test shot](docs/images/test_shot2.jpg)
+![test shot](test_shot2.jpg)
