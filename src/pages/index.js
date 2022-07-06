@@ -100,6 +100,16 @@ const IndexPage = () => {
 
       </ol>
       <hr />      
+      
+      <Link to="/thetax-starters/05-get-capturemode/">
+      <h2> #5 - Change App Screen Based on Camera Capture Mode (image or video)</h2>
+      <StaticImage alt="Concept 4 BloC " src="../images/concept_5_main.png" />      
+      </Link>
+      <p>
+        Change the app screen automatically based on the capture mode (state) of the RICOH THETA camera. 
+        The camera can either be in image or video mode.  The API commands and API settings are different
+        based on the mode the camera is in. 
+      </p>
 
       
 <h2>RICOH THETA API Community Culture </h2>
