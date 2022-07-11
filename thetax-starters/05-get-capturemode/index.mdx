@@ -1,14 +1,19 @@
 ---
 title: "05. Getting captureMode As Soon As Your App Starts"
 date: "2022-07-05"
-hero_image: "./screen_main.png"
-hero_image_alt: "camera settings screen"
+hero_image: "./test_shot2.jpg"
+hero_image_alt: "picture of developer and friends"
 hero_image_credit_text: "caitlynbakery"
 hero_image_credit_link: "https://github.com/caitlynbakery"
 ---
 
+# Overview
 
-This project focuses on getting the captureMode as soon as the application builds. The objective is to change the application's button to either picture or video mode depending on the camera's initial state.
+The objective of this tutorial is to change the application's button to either picture or video mode depending on the camera's initial state. This app is simple, it gets the captureMode as soon as the application builds. 
+
+This is the first of three tutorials focusing on getting camera mode. For this first one, the output appears in the debug console.
+
+The app is multi-bloc using 3 blocs total: Image Screen, Video Screen, and Camera Mode. Both the Image Screen and the Video Screen Blocs access the Camera Use bloc. In this way, the Camera Use bloc connects the two screens together. The Camera Use bloc accesses the camera's mode so that each of the screens will change depending on the mode of the physical camera. The app gets modeevent and getpictureevent. 
 
 Your application should be able to switch between the image and video modes for the best user experience.
 
